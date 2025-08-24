@@ -14,17 +14,6 @@ body {
     align-items: center;
 }
 
-#confetti-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-  }
-
-
 .wrapper {
     width: 100%;
     max-width: 420px;
@@ -36,25 +25,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 35px;
+    padding: 20px 35px;
     width: 100%;
 }
 
-.profile-img{
-    width: 60px;
-    border-radius: 200px;
-    border: 2px solid white;
+
+h1 {
+    margin: 10px 0;
 }
 
-.saldo {
-    background-color: transparent;
-    color: white;
-    padding: 8px 16px;
-    border: 1px solid white;
-    border-radius: 10px;
-    font-weight: none;
-    font-size: 16px;
-}
 
 .tabs {
     display: flex;
@@ -68,7 +47,7 @@ header {
 .tab {
     color: white;
     font-size: 16px;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -81,76 +60,64 @@ header {
     max-width: 380px;
     background-color: white;
     margin: 20px auto;
-    margin-bottom: 100px;
-    padding: 24px 15px;
+    padding: 24px 20px;
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
-.quiz-progress {
-    width: 100%;
-    height: 8px;
-    background-color: #e0e0e0;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    overflow: hidden;
+.container p {
+    margin: 15px 0;
 }
 
-.quiz-progress-bar {
-    height: 100%;
-    background-color: #1daa61;
-    width: 0%;
-    transition: width 0.5s ease;
+.container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.secure-bar {
+    background-color: #308e83;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 40px;
+    max-width: 380px;
 }
 
 .container button {
-    margin-top: 5px;
+    margin-top: 20px;
     width: 100%;
-    padding: 10px;
-    background-color: #CED4DA;
-    color: #308E83;
+    padding: 14px;
+    background-color: #1daa61;
+    color: white;
     font-weight: bold;
-    border-radius: 5px;
-    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .container button:hover {
     background-color: #55BC84;
+    color: #f9f9f9;
     transform: scale(1.03);
-    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-.opcao-quiz.selecionado {
-    background-color: #1daa61;
-    color: white;
-    transform: scale(1.03);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-
-.opcao-quiz {
-    background-color: #f1f1f1;
-    color: #1c1c1c;
-    font-weight: 500;
-    border-radius: 10px;
-    border: none;
+p.error-text {
     font-size: 14px;
-    padding: 6px 8px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    flex: 1 1 15%;
-    max-width: 46%;
-    text-align: center;
+    margin: 5px 0 !important;
+    color: rgb(247, 90, 90);
 }
-
-.hidden{
-    display: none !important;
-}
-
 
 .menu-inferior {
     position: fixed;
@@ -165,7 +132,8 @@ header {
     border-top-left-radius: 10px;
     display: flex;
     justify-content: space-around;
-    padding: 15px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
     z-index: 999;
 }
 
@@ -184,6 +152,68 @@ header {
     margin-bottom: 4px;
 }
 
-.hidden{
-    display: none;
+#popupPremio {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 7px 7px 13px 0px rgba(64, 61, 64, 0.23);
+    background-color: white;
+    padding: 10px 24px 24px 24px;
+    border-radius: 10px;
+
+    /* animação */
+    animation: popup 0.4s ease-out forwards;
+}
+
+.title-popup {
+    color: #636161;
+    font-size: 20px;
+    animation: pulse 0.8s ease-out infinite;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+@keyframes popup {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05)
+    }
 }

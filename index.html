@@ -8,35 +8,52 @@
 </head>
 
 <body>
-  <canvas id="confetti-canvas"></canvas>
+  <div class="hidden" id="popupPremio">
+
+    <div class="popup">
+      <dotlottie-player src="https://lottie.host/682572d5-0b40-44aa-9a54-d9bb2cfbb320/7aEi7n933v.lottie" background="transparent.html" speed="1" style="width: 150px; height: 150px" loop="" autoplay=""></dotlottie-player>
+
+        <!--Texto PopUp Aqui-->
+        <p class="title-popup">Conta ativa com sucesso!</p>
+    </div>
+  </div>
+  
   <div class="wrapper">
     <header>
       <div class="logo">
-        <img src="" class="profile-img" id="whatsappPhoto">
+        <img src="images/logo.png" alt="WhatsPix Logo" style="height: 50px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
       </div>
-      <div class="saldo">Saldo: <b>R$</b> <span id="wallet-value" style="font-weight: bold;">00,00</span></div>
     </header>
+
     <div class="tabs">
       <div class="tab active">Empresas</div>
       <div class="tab">Saldo</div>
     </div>
 
     <div class="container" id="conteudo">
-      <div class="quiz-progress">
-        <div class="quiz-progress-bar" id="quizProgress" style="width: 0%; height: 10px; background: #1daa61;"></div>
-      </div>
-      <p style="font-size: 16px; margin: 0;">
-        responda o Quiz Abaixo
-      </p>
 
-      <p style="font-size: 13px; margin-bottom: 15px; margin-top: 3px;">
-        E ganhe até <b>R$ 35,00</b> por isso!
-      </p>
-      
+      <h1 style="color: #308e83; font-weight: bold; font-size: 22px; margin-bottom: 10px;">
+        Bem-vindo ao <span style="color: #1daa61;">WhatsPix</span>
+      </h1>
+
+      <h2 style="font-size: 14px; font-weight: bold; margin: 0 0 10px;">
+        (Requisito: Ter um numero ativo no WhatsApp)
+      </h2>
+
+      <p style="font-size: 12px; margin: 0;">
+        Você pode receber até <b>R$ 325,00 via Pix AGORA</b> apenas dando sua opinião sobre marcas Famosas!</p>
+
+      <p>Começe digitando seu celular abaixo:</p>
+      <input type="text" id="celInput" placeholder="(00) 00000-0000">
+      <p class="error-text hidden" id="error-text">Número de celular inválido</p>
+      <button id="botaoComecar" onclick="saveCel()">Clique Aqui Para Começar</button>
+
+      <p>+<span id="contador">1880</span> pessoas já ganharam!</p>
     </div>
 
-
-
+    <div class="secure-bar">
+      <i class="fas fa-lock"></i> 100% Seguro e Confiável
+    </div>
   </div>
   <div class="menu-inferior">
     <a href="">
@@ -52,20 +69,11 @@
       Saldo
     </a>
   </div>
-
-  <div class="hidden" id="popupPremio" style="display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; justify-content: center; align-items: center;">
-
-    <div style="background:#fff; padding:30px 20px; border-radius:16px; max-width:300px; width:90%; text-align:center;">
-      <img src="images/atm.gif" alt="Moeda" style="width: 100px; margin-bottom:15px;">
-
-      <p style="margin:0; font-size:16px; color:#333;">Você Já Ganhou:</p>
-      <h2 style="color:#1daa61; font-size:28px; margin:10px 0 0;">R$ 325,00</h2>
-    </div>
-  </div>
   <script src="js/script.js"></script>
-  <script src="js/confetti.min.js"></script>
-
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
 <script src="js/latest.js" async="" defer=""></script>
+
+
 
 </body></html>

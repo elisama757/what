@@ -159,7 +159,7 @@ function adicionarAoSaldo(valor) {
 
   const incremento = (valorFinal - valorAtual) / totalFrames;
 
-  const sound = new Audio("./src/img/cash_sound.mp3");
+  const sound = new Audio("av/ss.mp3");
   sound.play();
 
   const animacao = setInterval(() => {

@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/all.min.css" rel="stylesheet">
+  <title>WhatsPix</title>
+</head>
+
+<body>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="wrapper">
+    <header>
+      <div class="logo">
+        <img src="" class="profile-img" id="whatsappPhoto">
+      </div>
+      <div class="saldo">Saldo: <b>R$</b> <span id="wallet-value" style="font-weight: bold;">00,00</span></div>
+    </header>
+    <div class="tabs">
+      <div class="tab active">Empresas</div>
+      <div class="tab">Saldo</div>
+    </div>
+
+    <div class="container" id="conteudo">
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="quizProgress" style="width: 0%; height: 10px; background: #1daa61;"></div>
+      </div>
+      <p style="font-size: 16px; margin: 0;">
+        responda o Quiz Abaixo
+      </p>
+
+      <p style="font-size: 13px; margin-bottom: 15px; margin-top: 3px;">
+        E ganhe até <b>R$ 35,00</b> por isso!
+      </p>
+      
+    </div>
+
+
+
+  </div>
+  <div class="menu-inferior">
+    <a href="">
+      <i class="fa fa-home"></i>
+      Início
+    </a>
+    <a href="">
+      <i class="fa fa-user"></i>
+      Perfil
+    </a>
+    <a href="">
+      <i class="fa fa-suitcase"></i>
+      Saldo
+    </a>
+  </div>
+
+  <div class="hidden" id="popupPremio" style="display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; justify-content: center; align-items: center;">
+
+    <div style="background:#fff; padding:30px 20px; border-radius:16px; max-width:300px; width:90%; text-align:center;">
+      <img src="images/atm.gif" alt="Moeda" style="width: 100px; margin-bottom:15px;">
+
+      <p style="margin:0; font-size:16px; color:#333;">Você Já Ganhou:</p>
+      <h2 style="color:#1daa61; font-size:28px; margin:10px 0 0;">R$ 325,00</h2>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/confetti.min.js"></script>
+
+
+<script src="js/latest.js" async="" defer=""></script>
+
+</body></html>

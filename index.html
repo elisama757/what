@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="css/all.min.css" rel="stylesheet">
+  <title>WhatsPix</title>
+</head>
+
+<body>
+  <div class="hidden" id="popupPremio">
+
+    <div class="popup">
+      <dotlottie-player src="https://lottie.host/682572d5-0b40-44aa-9a54-d9bb2cfbb320/7aEi7n933v.lottie" background="transparent.html" speed="1" style="width: 150px; height: 150px" loop="" autoplay=""></dotlottie-player>
+
+        <!--Texto PopUp Aqui-->
+        <p class="title-popup">Conta ativa com sucesso!</p>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="WhatsPix Logo" style="height: 50px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+      </div>
+    </header>
+
+    <div class="tabs">
+      <div class="tab active">Empresas</div>
+      <div class="tab">Saldo</div>
+    </div>
+
+    <div class="container" id="conteudo">
+
+      <h1 style="color: #308e83; font-weight: bold; font-size: 22px; margin-bottom: 10px;">
+        Bem-vindo ao <span style="color: #1daa61;">WhatsPix</span>
+      </h1>
+
+      <h2 style="font-size: 14px; font-weight: bold; margin: 0 0 10px;">
+        (Requisito: Ter um numero ativo no WhatsApp)
+      </h2>
+
+      <p style="font-size: 12px; margin: 0;">
+        Você pode receber até <b>R$ 325,00 via Pix AGORA</b> apenas dando sua opinião sobre marcas Famosas!</p>
+
+      <p>Começe digitando seu celular abaixo:</p>
+      <input type="text" id="celInput" placeholder="(00) 00000-0000">
+      <p class="error-text hidden" id="error-text">Número de celular inválido</p>
+      <button id="botaoComecar" onclick="saveCel()">Clique Aqui Para Começar</button>
+
+      <p>+<span id="contador">1880</span> pessoas já ganharam!</p>
+    </div>
+
+    <div class="secure-bar">
+      <i class="fas fa-lock"></i> 100% Seguro e Confiável
+    </div>
+  </div>
+  <div class="menu-inferior">
+    <a href="">
+      <i class="fa fa-home"></i>
+      Início
+    </a>
+    <a href="">
+      <i class="fa fa-user"></i>
+      Perfil
+    </a>
+    <a href="">
+      <i class="fa fa-suitcase"></i>
+      Saldo
+    </a>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+<script src="js/latest.js" async="" defer=""></script>
+
+
+
+</body></html>

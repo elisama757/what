@@ -53,7 +53,7 @@ function sleep(ms) {
         await sleep(1000)
         popup.classList.remove('hidden')
         await sleep(2000)
-        window.location.href = '/av'
+        window.location.href = '/av/index.html'
       })
 
   }
